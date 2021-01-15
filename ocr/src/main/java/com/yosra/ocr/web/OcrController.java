@@ -4,12 +4,8 @@ import com.yosra.ocr.service.OcrService;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * This class contains all web services exposes to the client.
@@ -18,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("ocr")
+@CrossOrigin("http://localhost:4200")
 public class OcrController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OcrController.class);
@@ -38,8 +35,8 @@ public class OcrController {
      * @return the extracted text
      *
      * */
-    @PostMapping(value = "/convert", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<JSONObject> convertImage(@RequestParam("image") String image) {
+    @PostMapping(value = "/convert")
+    public ResponseEntity<JSONObject> convertImage(@RequestBody String image) {
         LOGGER.info("Requesting to extract text from image ");
         JSONObject result = this.ocrService.extractText(image);
         return ResponseEntity.ok(result);

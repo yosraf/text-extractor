@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
+import { OcrComponent } from './component/ocr/ocr.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ResultComponent } from './component/result/result.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OcrComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
