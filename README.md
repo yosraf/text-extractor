@@ -2,7 +2,8 @@
   <h3 align="center">Text extractor</h3>
  
   <p align="center">
-   This project allow to extract text from image using OCR api and display the result to the user
+   This project allow to extract text from image using OCR api and display the result to the user.
+    It only support english language.
     <br />
   </p>
 </p>
