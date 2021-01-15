@@ -9,6 +9,8 @@ export class ResultComponent implements OnInit {
 
   @Input("text")
   text:string;
+  @Input("data")
+  data:string;
   constructor() { }
 
   ngOnInit(): void {

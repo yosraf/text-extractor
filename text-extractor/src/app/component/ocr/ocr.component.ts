@@ -30,6 +30,7 @@ export class OcrComponent implements OnInit {
           let resolver = this.componentFactoryResolver.resolveComponentFactory(ResultComponent);
           const resultComp = this.result.createComponent(resolver).instance;
           resultComp.text = this.text;
+          resultComp.data = reader.result.toString();
         }
 
       });

@@ -3,10 +3,13 @@
     <span class="sr-only">Loading...</span>
   </div>
 </div>
-<h3 class="text-info">Extract text from image</h3>
-<div class="custom-file" *ngIf="!loading">
-  <input type="file" class="custom-file-input" (change)="onChange($event)" accept="image/jpeg, image/png">
-  <label class="custom-file-label">Choose file</label>
+<div *ngIf="!loading">
+  <h3 class="text-info">Extract text from image</h3>
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" (change)="onChange($event)" accept="image/jpeg, image/png">
+    <label class="custom-file-label">Choose file</label>
+  </div>
+
 </div>
 <div #result class="result">
 </div>
