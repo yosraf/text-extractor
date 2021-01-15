@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "text-extractor"
+    }
+  },
+  "defaultProject": "text-extractor",
+  "cli": {
+    "analytics": false
+  }
 }

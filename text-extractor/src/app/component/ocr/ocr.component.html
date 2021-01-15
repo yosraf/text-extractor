@@ -1,15 +1,12 @@
-
 <div class="text-center loader" *ngIf="loading">
   <div class="spinner-border text-info" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </div>
+<h3 class="text-info">Extract text from image</h3>
 <div class="custom-file" *ngIf="!loading">
-    <input type="file" class="custom-file-input" (change)="onChange($event)" accept="image/jpeg, image/png">
-    <label class="custom-file-label" >Choose file</label>
+  <input type="file" class="custom-file-input" (change)="onChange($event)" accept="image/jpeg, image/png">
+  <label class="custom-file-label">Choose file</label>
 </div>
-<div #result> 
-
+<div #result class="result">
 </div>
-
-  

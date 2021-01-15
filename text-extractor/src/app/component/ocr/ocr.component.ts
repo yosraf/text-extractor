@@ -25,11 +25,14 @@ export class OcrComponent implements OnInit {
     reader.onload = () => {
       this.service.extractText(reader.result.toString()).subscribe((res: Object) => {
         this.loading = false;
-        this.text = res['ParsedResults'][0]["ParsedText"];
-        let resolver = this.componentFactoryResolver.resolveComponentFactory(ResultComponent);
-        const resultComp = this.result.createComponent(resolver).instance;
-        resultComp.text= this.text;
-      })
+        if (res["OCRExitCode"] === 1) {
+          this.text = res['ParsedResults'][0]["ParsedText"];
+          let resolver = this.componentFactoryResolver.resolveComponentFactory(ResultComponent);
+          const resultComp = this.result.createComponent(resolver).instance;
+          resultComp.text = this.text;
+        }
+
+      });
     };
   }
 
