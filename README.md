@@ -1,25 +1,27 @@
-<p align="center">
-  <h3 align="center">Text extractor</h3>
- 
-  <p align="center">
-   This project allow to extract text from image using OCR api and display the result to the user.
-    It only support english language.
-    <br />
-  </p>
-</p>
+# TextExtractor
 
-## About The Project
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
-<br/>
-The project contains two parts:
-<ul>
-  <li>the frontend part  built using Angular 9</li>
-<li> the backend part a rest api built using spring boot, the ws recieve an image decoded in base64 and return 
-  JsonOject that contains allo the info extracted from it</li>
-  </ul>
+## Development server
 
-## Demo
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-<br/>
- <a>    <img src="./demo.png" alt="Logo" >
- </a>
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
